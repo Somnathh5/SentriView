@@ -1,0 +1,381 @@
+body {
+    background-color: #e0ffff;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar {
+    background-color: hsl(182, 71%, 19%);
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+#nav-logo {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#nav-logo-sprites {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-logo-base {
+    background: url('download.jpg') no-repeat center center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    margin-right: 1em;
+}
+
+#logo-ext {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#nav-links {
+    display: flex;
+    align-items: center;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0 1em;
+    font-size: 1em;
+}
+
+#nav-links a:hover {
+    text-decoration: underline;
+}
+
+.btn-signup {
+    background-color: #0fda08c4;
+    color: rgb(100, 153, 38);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 1em;
+    height: 40px;
+    width: 5pc;
+    text-align: center;
+    font-style: bold;
+}
+
+.btn-signup:hover {
+    background-color: #0771e2;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+    max-width: 1080px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: hidden;
+    position: relative; /* Ensure carousel controls are positioned inside the frame */
+    height: 550px; /* Adjusted height to ensure space for controls */
+}
+
+@keyframes change-slide {
+    0%, 20% {
+        transform: translateX(0);
+    }
+    25%, 45% {
+        transform: translateX(calc(-100% - 1rem));
+    }
+    50%, 70% {
+        transform: translateX(calc(-200% - 2rem));
+    }
+    75%, 95% {
+        transform: translateX(calc(-300% - 3rem));
+    }
+    100% {
+        transform: translateX(calc(-300% - 3rem));
+    }
+}
+
+@keyframes nav1 {
+    0%, 20% {
+        opacity: 1;
+    }
+    40%, 60% {
+        opacity: 0.5;
+    }
+    80%, 100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes nav2 {
+    0%, 20% {
+        opacity: 0.5;
+    }
+    40%, 60% {
+        opacity: 1;
+    }
+    80%, 100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes nav3 {
+    0%, 20% {
+        opacity: 0.5;
+    }
+    40%, 60% {
+        opacity: 0.5;
+    }
+    80%, 100% {
+        opacity: 1;
+    }
+}
+
+@keyframes nav4 {
+    0%, 20% {
+        opacity: 0.5;
+    }
+    25%, 45% {
+        opacity: 0.5;
+    }
+    50%, 70% {
+        opacity: 0.5;
+    }
+    75%, 95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.carousel__slides {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    animation-name: change-slide;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+.carousel__slides .carousel__slid:nth-child(1) {
+    background-color: #d5dcef;
+}
+
+.carousel__slides .carousel__slid:nth-child(2) {
+    background-color: #d5efe0;
+}
+
+.carousel__slides .carousel__slid:nth-child(3) {
+    background-color: #efd5e6;
+}
+
+.carousel__slides .carousel__slid:nth-child(4) {
+    background-color: #f5d5d5; /* New color for 4th slide */
+}
+
+.carousel__slid {
+    flex: 1 0 100%;
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    
+}
+
+.carousel__title {
+    font-family: "Rozha One", serif;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.carousel__image {
+    height: 300px;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.carousel__paragraph {
+    font-size: 1.2rem;
+    line-height: 1.56;
+}
+
+.carousel__control {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Position the controls absolutely within the carousel */
+    bottom: 10px; /* Place controls at the bottom of the carousel */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Ensure controls are above other elements */
+}
+
+.carousel__nav {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#carousel__nav1 {
+    animation-name: nav1;
+}
+
+#carousel__nav2 {
+    animation-name: nav2;
+}
+
+#carousel__nav3 {
+    animation-name: nav3;
+}
+
+#carousel__nav4 {
+    animation-name: nav4;
+}
+
+.carousel__nav {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+.carousel__btn:checked ~ .carousel .carousel__slides,
+.carousel__btn:checked ~ .carousel .carousel__nav {
+    animation: none;
+}
+
+.carousel__nav:hover,
+#carousel__btn1:checked ~ .carousel #carousel__nav1,
+#carousel__btn2:checked ~ .carousel #carousel__nav2,
+#carousel__btn3:checked ~ .carousel #carousel__nav3,
+#carousel__btn4:checked ~ .carousel #carousel__nav4 {
+    opacity: 1;
+}
+
+#carousel__btn1:checked ~ .carousel .carousel__slides {
+    transform: translateX(0);
+}
+
+#carousel__btn2:checked ~ .carousel .carousel__slides {
+    transform: translateX(calc(-100% - 1rem));
+}
+
+#carousel__btn3:checked ~ .carousel .carousel__slides {
+    transform: translateX(calc(-200% - 2rem));
+}
+
+#carousel__btn4:checked ~ .carousel .carousel__slides {
+    transform: translateX(calc(-300% - 3rem));
+}
+
+.footer-basic {
+    margin-top: 100px;
+    padding: 40px 0;
+    background-color: #4b4b4b;
+    color: #000000;
+}
+
+.footer-basic ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer-basic li {
+    padding: 0 10px;
+}
+
+.footer-basic ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+    opacity: 1;
+}
+
+.footer-basic .social {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.footer-basic .social>a {
+    font-size: 24px;
+    width: 40px;
+    height: 30px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0 8px;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.footer-basic .social>a:hover {
+    opacity: 0.9;
+}
+
+.footer-basic .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 0;
+}

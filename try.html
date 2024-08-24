@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentriView</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+    background-color: #e0ffff;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar {
+    background-color: hsl(182, 71%, 19%);
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+#nav-logo {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#nav-logo-sprites {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-logo-base {
+    background: url('download.jpg') no-repeat center center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    margin-right: 1em;
+}
+
+#logo-ext {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#nav-links {
+    display: flex;
+    align-items: center;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0 1em;
+    font-size: 1em;
+}
+
+#nav-links a:hover {
+    text-decoration: underline;
+}
+
+.btn-signup {
+    background-color: #0fda08c4;
+    color: rgb(100, 153, 38);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 1em;
+    height: 40px;
+    width: 5pc;
+    text-align: center;
+    font-style: bold;
+}
+
+.btn-signup:hover {
+    background-color: #0771e2;
+    color: white;
+}
+        .container {
+            max-width: 1200px;
+            padding: 240px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        .email-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .email-form input[type="email"] {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            flex: 1;
+            margin-right: 10px;
+        }
+        .email-form button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .email-form button:hover {
+            background-color: #555;
+        }
+        .terms {
+            font-size: 0.8em;
+            color: #000000;
+        }
+        .footer-basic {
+            margin-top: 100px;
+            padding: 40px 0;
+            background-color: #555555;
+            color: #000000;
+        }
+        .footer-basic ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        .footer-basic li {
+            padding: 0 10px;
+        }
+        .footer-basic ul a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+        .footer-basic ul a:hover {
+            opacity: 1;
+        }
+        .footer-basic .social {
+            text-align: center;
+            padding-bottom: 25px;
+        }
+        .footer-basic .social > a {
+            font-size: 24px;
+            width: 40px;
+            height: 30px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            margin: 0 8px;
+            color: inherit;
+            opacity: 0.75;
+        }
+        .footer-basic .social > a:hover {
+            opacity: 0.9;
+        }
+        .footer-basic .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 13px;
+            color: #aaa;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav-bar">
+        <div id="nav-logo">
+            <a href="/" id="nav-logo-sprites" class="nav-logo-link nav-progressive-attribute" aria-label="SentriView">
+                <span id="logo-ext" class="nav-progressive-content">SentriView</span>
+                <span class="nav-logo-locale">.in</span>
+                <span class="nav-logo-base"></span>
+            </a>
+        </div>
+        <div id="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">About</a>
+            <a href="#" class="btn-signup">Login</a>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Empowering Safety Through Advanced CCTV Monitoring Solutions</h1>
+        <p>Experience peace of mind with our cutting-edge CCTV monitoring applications that detect escalator falls, count people, alert for line crossings, and identify abandoned baggage.</p>
+        <div class="email-form">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Sign up</button>
+        </div>
+        <p class="terms">By clicking Sign up, you confirm your agreement with our Terms and Conditions.</p>
+    </div>
+    
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+                <a href="#"><i class="icon ion-social-instagram"></i></a>
+                <a href="#"><i class="icon ion-social-snapchat"></i></a>
+                <a href="#"><i class="icon ion-social-twitter"></i></a>
+                <a href="#"><i class="icon ion-social-facebook"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Company Name © 2018</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
